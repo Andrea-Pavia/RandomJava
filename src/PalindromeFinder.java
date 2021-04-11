@@ -10,12 +10,12 @@ public class PalindromeFinder
 		Scanner in = new Scanner(System.in);
 		
 		System.out.println("Eneter word to analyze: ");
-		String firstWord = in.next();
+		String enteredWord = in.next();
 						
 		boolean ispalendrone = true;
-		for(int i=0; i<firstWord.length(); i++)
+		for(int i=0; i<enteredWord.length(); i++)
 		{
-			if(!firstWord.substring(i, i+1).equals(firstWord.substring(firstWord.length()-1-i, firstWord.length()-i)))
+			if(!enteredWord.substring(i, i+1).equals(enteredWord.substring(enteredWord.length()-1-i, enteredWord.length()-i)))
 			{
 				ispalendrone = false;
 				break;
@@ -23,9 +23,9 @@ public class PalindromeFinder
 		}
 		
 		if(ispalendrone)
-			System.out.println(firstWord + " is a palindrome");
+			System.out.println(enteredWord + " is a palindrome");
 		else
-			System.out.println(firstWord + " is not a palindrome");
+			System.out.println(enteredWord + " is not a palindrome");
 	}
 	
 	public static void main(String[] args)
